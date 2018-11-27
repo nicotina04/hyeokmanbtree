@@ -54,11 +54,7 @@ function insertBT(T, m, key)
       var i = 0;
       if(x.n < m - 1)
       {
-        while((i < x.n) && (key >= x.keys[i]))
-        {
-          //if(key < x.keys[i]) {break;}
-          ++i;
-        }
+        while((i < x.n) && (key >= x.keys[i])) {++i;}
         x.keys.splice(i, 0, key);
         ++x.n;
         x.keys.splice(m - 1);
@@ -67,14 +63,7 @@ function insertBT(T, m, key)
       }
       else // keys is full
       {
-        while(i < x.n)
-        {
-          if(key < x.keys[i])
-          {
-              break;
-          }
-          ++i;
-        }
+        while((i < x.n) && (key >= x.keys[i])) {++i;}
         x.keys.splice(i, 0, key); // make overflows
 
         var tempNode = getNode(m);
