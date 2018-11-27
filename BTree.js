@@ -1,11 +1,3 @@
-test = [ 30,20,62,110,140,15,65,136,150,120,30,132,19,128,138,100,16,145,70,42,69,43,26,60,130, 50,18,7,36,58,22,41,59,57,54,33,75,124,122,123];
-test.sort((f, s) =>
-{
-  if(f === s) {return 0;}
-  else if(f > s) {return 1;}
-  else {return -1;}
-});
-console.log(test);
 function MultiNode(x)
 {
     this.keys = [];
